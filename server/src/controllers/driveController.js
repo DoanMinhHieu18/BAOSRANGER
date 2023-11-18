@@ -107,7 +107,6 @@ let handleUploadFile = async (req, res) => {
   if (!folderId) {
     folderId = await handleCreateFolder(req);
     await userService.updateFolderId(req.user._json.email, folderId);
-    console.log(folderId);
   }
   // folderId = "1RiBFMGSnD3lSWAZHJlQA0bISlXTKS2Dy";
   if (!req.file) {
@@ -161,6 +160,8 @@ let handleUploadFile = async (req, res) => {
       media: media,
       fields: "id",
     });
+    let link = "https://drive.google.com/file/d/" + file.data.id + "/view";
+    await userService.saveDoc(req.user._json.email, req.file.originalname, link)
     if (file) {
       await fs.unlink(uploadDirectory + req.file.originalname, () => {
         console.log("file deleted");
