@@ -1,0 +1,156 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.home-header-container {
+  box-shadow: 5px 1px 10px rgba(0, 0, 0, 0.3);
+
+  .logo {
+    margin-left: 50px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .ssps {
+    width: 150px;
+    height: 90px;
+    cursor: pointer;
+    color: blue;
+    font-size: 25px !important;
+    font-weight: 600;
+    padding-top: 30px;
+  }
+
+  .header-language {
+    width: 200px;
+    height: 90px;
+    float: right;
+
+    .language-top {
+      margin-left: 84px;
+      padding-top: 25px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .language-bottom {
+      margin-left: 80px;
+      border: none;
+      opacity: 0.5;
+    }
+  }
+
+  .login {
+    height: 90px;
+    width: 150px;
+
+    .button-login {
+      height: 35px;
+      width: 100px;
+      margin-top: 30px;
+    }
+  }
+}
+
+.home-banner {
+  // width: 100vw;
+  height: 750px;
+  display: flex;
+  background-image: url("../assets/bkcs2.jpg");
+  background-size: cover;
+  position: relative;
+
+  .welcome-content {
+    width: 100%;
+    font-size: 50px;
+    font-weight: 600;
+    // border: 1px solid red;
+    text-align: center;
+    padding-top: 18%;
+    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+    color: white;
+  }
+}
+
+.home-footer {
+  height: 350px;
+  background-image: url("../assets/home-footer.jpg");
+  background-size: cover;
+  margin-top: 5px;
+
+
+  .home-footer-content {
+    background: #0d5ca1b0;
+    position: absolute;
+    width: 100%;
+    height: 350px;
+
+    .logo-footer {
+      // width: 50px;
+      height: 100px;
+      margin-top: 96px;
+      margin-left: 92px;
+    }
+
+    .ssps {
+      cursor: pointer;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 130px;
+      margin-left: 10px;
+    }
+
+
+    .thongtin {
+      width: 100%;
+      height: 15px;
+      font-weight: 600;
+      padding-top: 60px;
+      color: white;
+    }
+
+    .about {
+      width: 100%;
+      height: 15px;
+      padding-top: 40px;
+      color: white;
+    }
+
+    .policy {
+      width: 100%;
+      height: 15px;
+      padding-top: 40px;
+      color: white;
+    }
+
+    .content1 {
+      width: 100%;
+      height: 15px;
+      font-weight: 600;
+      padding-top: 60px;
+      color: white;
+    }
+
+    .content2 {
+      width: 100%;
+      height: 15px;
+      padding-top: 40px;
+      color: white;
+    }
+
+    .content3 {
+      width: 100%;
+      height: 15px;
+      padding-top: 40px;
+      color: white;
+    }
+
+    .content4 {
+      width: 100%;
+      height: 15px;
+      color: white;
+      padding-top: 40px;
+    }
+  }
+}

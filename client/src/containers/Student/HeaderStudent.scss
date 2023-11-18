@@ -1,0 +1,328 @@
+.header-homepagestudent-container {
+
+  // width: 100%;
+  // height: 90px;
+  // // border: 1px solid red;
+  box-shadow: 5px 1px 10px rgba(0, 0, 0, 0.3);
+
+  .homepage-student-logo {
+    width: 90px;
+    height: 90px;
+    margin-left: 60px;
+  }
+
+  .homepagestudent-ssps {
+    cursor: pointer;
+    color: blue;
+    font-size: 25px !important;
+    font-weight: 600;
+    padding-top: 30px;
+  }
+
+  .warehouse {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .addbottom {
+    border-bottom: 3px solid blue;
+  }
+
+  .homepagestudent-search {
+    border-radius: 8px;
+    background-color: grey;
+    width: 30px !important;
+    height: 30px;
+    margin-top: 30px;
+
+  }
+
+  .home-header-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .left-content {
+      width: 15%;
+      display: flex;
+
+      .header-logo {
+        height: 100%;
+        width: 50%;
+
+        .homepage-student-logo {
+          margin-left: 20px;
+          height: 100%;
+          width: 100%;
+          cursor: pointer;
+          transform: scale(0.5, 0.7);
+        }
+      }
+
+      .ssps {
+        height: 100%;
+        width: 50%;
+        cursor: pointer;
+        color: blue;
+        font-size: 20px;
+        font-weight: 600;
+        padding-top: 30px;
+      }
+    }
+
+    .center-content {
+      width: 65%;
+      margin-top: 20px;
+
+      .search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: #ededea;
+        margin: 0 auto;
+        width: fit-content;
+        padding: 10px;
+
+        i {
+          margin: 0 5px;
+        }
+
+        input {
+          height: 30px;
+          width: 390px;
+          background: transparent;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+
+    .language {
+      width: 10%;
+
+      // border: 1px solid red;
+      .container-opt {
+        position: absolute;
+        overflow: hidden;
+        height: 0;
+        width: 200px;
+        margin-left: 30px;
+        margin-top: 10px;
+        background-color: white;
+        cursor: pointer;
+        font-weight: 600;
+
+        .txt {
+          height: 30px;
+          padding-left: 10px;
+          padding-top: 5px;
+
+          &:hover {
+            background-color: #0f6cbf;
+            color: white;
+          }
+        }
+
+        &.show {
+          height: auto;
+          width: 200px;
+          border: 1px solid black;
+          border-radius: 8px;
+        }
+      }
+
+      .language-top {
+        i {
+          margin-right: 5px;
+        }
+
+        height: 50%;
+        // margin-top: 15px;
+        margin-left: 45px;
+        // border: 1px solid red;
+        padding-top: 25px;
+        font-weight: 600;
+        font-size: 15px;
+      }
+
+      .language-bottom {
+        // height: 50%;
+        margin-left: 60px;
+        border: none;
+        opacity: 0.5;
+      }
+    }
+
+    .avatar {
+      width: 10%;
+      font-size: 35px;
+      padding-top: 18px;
+      padding-left: 10px;
+      height: 40px;
+      cursor: pointer;
+
+      img {
+        vertical-align: middle;
+        border-style: none;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .dropdown {
+        font-size: 27px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+// .home-header-student-container {
+//   width: 100%;
+//   height: 90px;
+//   // border: 1px solid red;
+//   box-shadow: 5px 1px 10px rgba(0, 0, 0, 0.3);
+
+//   .home-header-content {
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+
+//     .left-content {
+//       width: 15%;
+//       display: flex;
+
+//       .header-logo {
+//         height: 100%;
+//         width: 50%;
+
+//         .homepage-student-logo {
+//           margin-left: 20px;
+//           height: 100%;
+//           width: 100%;
+//           cursor: pointer;
+//           transform: scale(0.5, 0.7);
+//         }
+//       }
+
+//       .ssps {
+//         height: 100%;
+//         width: 50%;
+//         cursor: pointer;
+//         color: blue;
+//         font-size: 20px;
+//         font-weight: 600;
+//         padding-top: 30px;
+//       }
+//     }
+
+//     .center-content {
+//       width: 65%;
+//       margin-top: 20px;
+
+//       .search {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         border-radius: 10px;
+//         background-color: #ededea;
+//         margin: 0 auto;
+//         width: fit-content;
+//         padding: 10px;
+
+//         i {
+//           margin: 0 5px;
+//         }
+
+//         input {
+//           height: 30px;
+//           width: 390px;
+//           background: transparent;
+//           border: none;
+//           outline: none;
+//         }
+//       }
+//     }
+
+//     .language {
+//       width: 10%;
+
+//       // border: 1px solid red;
+//       .container-opt {
+//         position: absolute;
+//         overflow: hidden;
+//         height: 0;
+//         width: 200px;
+//         margin-left: 30px;
+//         margin-top: 10px;
+//         background-color: white;
+//         cursor: pointer;
+//         font-weight: 600;
+
+//         .txt {
+//           height: 30px;
+//           padding-left: 10px;
+//           padding-top: 5px;
+
+//           &:hover {
+//             background-color: #0f6cbf;
+//             color: white;
+//           }
+//         }
+
+//         &.show {
+//           height: auto;
+//           width: 200px;
+//           border: 1px solid black;
+//           border-radius: 8px;
+//         }
+//       }
+
+//       .language-top {
+//         i {
+//           margin-right: 5px;
+//         }
+
+//         height: 50%;
+//         // margin-top: 15px;
+//         margin-left: 45px;
+//         // border: 1px solid red;
+//         padding-top: 25px;
+//         font-weight: 600;
+//         font-size: 15px;
+//       }
+
+//       .language-bottom {
+//         // height: 50%;
+//         margin-left: 60px;
+//         border: none;
+//         opacity: 0.5;
+//       }
+//     }
+
+//     .avatar {
+//       width: 10%;
+//       font-size: 35px;
+//       padding-top: 18px;
+//       padding-left: 10px;
+//       height: 40px;
+//       cursor: pointer;
+
+//       img {
+//         vertical-align: middle;
+//         border-style: none;
+//         height: 40px;
+//         border-radius: 50%;
+//       }
+
+//       .dropdown {
+//         font-size: 27px;
+//         margin-left: 5px;
+//       }
+//     }
+//   }
+// }

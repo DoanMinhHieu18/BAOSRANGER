@@ -1,0 +1,158 @@
+.modal-setup-print {
+    width: 1000px;
+    height: 560px;
+    background-color: #49454F;
+
+    .modal-header-setup {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        background-color: #49454F;
+        border: none;
+
+        .chooseMachine {
+            width: 80%;
+            height: 20px;
+            font-size: 25px;
+            font-weight: 600;
+            padding-left: 40px;
+            padding-top: 10px;
+            color: white;
+        }
+
+        .button-goBack {
+            width: 20%;
+            height: 20px;
+            //margin-top: 10px;
+            padding-top: 10px;
+            padding-left: 125px;
+            color: white;
+        }
+
+    }
+
+    .modal-body-one-setup {
+        width: 100%;
+        height: 250px;
+        background-color: #49454F;
+        border-top: 1px solid white;
+
+        .MachineList {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            //background-color: #ea2828;
+            display: flex;
+
+            .Machine {
+                width: 40%;
+                height: 100px;
+                margin-top: 10px;
+                margin-right: 10px;
+                margin-left: 45px;
+                //border: 1px solid red;
+                display: flex;
+
+                //background-color: #bc3fcd;
+                .PrinterIcon {
+                    width: 30%;
+                    height: 100%;
+                    border-radius: 15px 0 0 15px;
+                    background-color: white;
+                }
+
+                .Status {
+                    //margin-left: 5px;
+                    width: 70%;
+                    height: 100%;
+                    background-color: #D6E4FD;
+                    border-radius: 0 15px 15px 0;
+
+                    .PrinterType {
+                        font-size: 14px;
+                        font-weight: 600;
+                        padding-left: 10px;
+                        padding-top: 10px;
+                    }
+
+                    .PrinterStatus {
+                        margin-top: 40px;
+                        //border: 1px solid red;
+                        display: flex;
+
+                        .Icon {
+                            margin-top: 3px;
+                            margin-left: 7px;
+                            color: green
+                        }
+
+                        .StatusText {
+                            font-size: 14px;
+                            font-weight: 600;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .modal-body-two-setup {
+        width: 100%;
+        height: 220px;
+        background-color: #49454F;
+
+
+        .body-two-header {
+            width: 100%;
+            height: 50px;
+            font-size: 25px;
+            font-weight: 600;
+            padding-left: 40px;
+            padding-top: 10px;
+            color: white;
+            border-bottom: 1px solid white;
+        }
+
+        .SelectOption {
+            width: 400px;
+            height: 35px;
+            margin-left: 50px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+    }
+
+    .modal-footer-setup {
+        width: 100%;
+        height: 90px;
+        background-color: #49454F;
+        //display: flex;
+
+        .ConfirmButton {
+            width: 80px;
+            height: 30px;
+            margin-left: 70%;
+            margin-top: 20px;
+            background-color: #3563E9;
+            color: white;
+            border: none;
+            box-shadow: #49454F;
+            border-radius: 5px;
+        }
+
+        .CancelButton {
+            width: 80px;
+            height: 30px;
+            margin-top: 20px;
+            margin-left: 30px;
+            background-color: #D6E4FD;
+            color: #0A196F;
+            border: none;
+            box-shadow: #49454F;
+            border-radius: 5px;
+        }
+
+    }
+}

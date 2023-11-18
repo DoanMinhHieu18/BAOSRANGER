@@ -1,0 +1,221 @@
+.modal-print {
+    margin-top: 50px;
+    margin-left: 300px;
+
+    .modal-content {
+        width: 1000px;
+        height: 700px;
+
+        flex-direction: row;
+        // display: ;
+
+        .print-preview {
+            width: 55%;
+            height: 100%;
+
+        }
+
+        .print-config {
+            width: 45%;
+            height: 100%;
+            // border: 1px solid red;
+            background-color: rgb(73, 69, 79);
+
+            .setup-print-config {
+                color: white;
+                font-weight: 500;
+                font-size: 25px;
+                height: 10%;
+                border-bottom: 1px solid white;
+                padding-top: 20px;
+                padding-left: 30px;
+                margin-bottom: 20px;
+            }
+
+            .setup1 {
+                border: 1px solid white;
+                display: flex;
+                margin-right: 20px;
+                margin-left: 20px;
+                height: 80px;
+                margin-top: 10px;
+                width: 410px;
+
+                .custom {
+                    width: 30%;
+
+                    .custom-select {
+                        border-radius: 15px;
+                        height: 45%;
+                        margin-top: 3px;
+
+                        .custom-detail-all {
+                            text-align: center;
+                        }
+
+                        .custom-detail {
+                            text-align: center;
+                        }
+                    }
+
+                    .custom-input {
+                        margin-top: 2px;
+                        height: 45%;
+                        width: 100%;
+                        border-radius: 15px;
+                        text-align: center;
+                    }
+                }
+
+                .noncustom {
+                    width: 30%;
+
+                    .custom-select {
+                        border-radius: 15px;
+                        height: 50%;
+                        margin-top: 20px;
+
+                        .custom-detail-all {
+                            text-align: center;
+                        }
+
+                        .custom-detail {
+                            text-align: center;
+                        }
+                    }
+
+                    .custom-input {
+                        display: none;
+                    }
+                }
+
+                .name-config {
+                    color: white;
+                    // border: 1px solid white;
+                    font-size: 18px;
+                    margin-left: 10px;
+                    padding-top: 25px;
+                    width: 60%;
+
+                }
+            }
+
+            .setup {
+                border: 1px solid white;
+                display: flex;
+                margin-right: 20px;
+                margin-left: 20px;
+                height: 60px;
+                margin-top: 10px;
+                width: 410px;
+
+                .custom {
+                    width: 30%;
+
+                    .custom-select {
+                        border-radius: 15px;
+                        height: 48%;
+                        margin-top: 3px;
+
+                        .custom-detail-all {
+                            text-align: center;
+                        }
+
+                        .custom-detail {
+                            text-align: center;
+                        }
+                    }
+
+                    .custom-input {
+                        margin-top: 2px;
+                        height: 40%;
+                        width: 100%;
+                        border-radius: 15px;
+                        text-align: center;
+                    }
+                }
+
+                .noncustom {
+                    width: 30%;
+
+                    .custom-select {
+                        border-radius: 15px;
+                        height: 60%;
+                        margin-top: 10px;
+
+                        .custom-detail-all {
+                            text-align: center;
+                        }
+
+                        .custom-detail {
+                            text-align: center;
+                        }
+                    }
+
+                    .custom-input {
+                        display: none;
+                    }
+                }
+
+                .name-config {
+                    color: white;
+                    // border: 1px solid white;
+                    font-size: 18px;
+                    margin-left: 10px;
+                    padding-top: 17px;
+                    width: 60%;
+
+                }
+
+                .action-config {
+                    width: 40%;
+                    // border: 1px solid white;
+                    text-align: center;
+                    padding-top: 17px;
+                    border-radius: 30px;
+                }
+
+                .config-layout {
+                    border-radius: 15px;
+                    width: 30%;
+                    height: 60%;
+                    margin-top: 10px;
+
+                    .option {
+                        text-align: center;
+                    }
+                }
+
+                .config-numpage {
+                    border-radius: 15px;
+                    width: 30%;
+                    height: 60%;
+                    margin-top: 10px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .action-button {
+            margin-top: 25px;
+            margin-left: 250px;
+            display: flex;
+
+            .button-continue {
+                background-color: rgb(53, 99, 233);
+                color: white;
+                width: 90px;
+                height: 40px;
+            }
+
+            .button-cancel {
+                margin-left: 10px;
+                background-color: rgb(214, 228, 253);
+                color: rgb(10, 25, 111);
+                width: 90px;
+                height: 40px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,87 @@
+.home-header-admin-container {
+    width: 100%;
+    height: 90px;
+    // border: 1px solid red;
+    box-shadow: 5px 1px 10px rgba(0, 0, 0, 0.3);
+
+    .home-header-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .left-content {
+            width: 15%;
+            display: flex;
+
+            .header-logo {
+                height: 100%;
+                width: 50%;
+
+                .homepage-adimin-logo {
+                    margin-left: 20px;
+                    height: 100%;
+                    width: 100%;
+                    cursor: pointer;
+                    transform: scale(0.5, 0.7);
+                }
+            }
+
+            .ssps {
+                height: 100%;
+                width: 50%;
+                cursor: pointer;
+                color: blue;
+                font-size: 20px;
+                font-weight: 600;
+                padding-top: 30px;
+            }
+        }
+
+        .center-content {
+            width: 65%
+        }
+
+        .language {
+            width: 10%;
+            // border: 1px solid red;
+
+            .language-top {
+                height: 50%;
+                // margin-top: 15px;
+                margin-left: 63px;
+                // border: 1px solid red;
+                padding-top: 25px;
+                font-weight: 600;
+                font-size: 15px;
+            }
+
+            .language-bottom {
+                // height: 50%;
+                margin-left: 60px;
+                border: none;
+                opacity: 0.5;
+            }
+        }
+
+        .icon-admin {
+            width: 10%;
+            font-size: 35px;
+            padding-top: 18px;
+            padding-left: 10px;
+            height: 40px;
+            cursor: pointer;
+
+            img {
+                vertical-align: middle;
+                border-style: none;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            .dropdown {
+                font-size: 27px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
