@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# STUDENT SMART PRINTING SERVICE - SSPS
+Hệ thống In Ấn Thông Minh Cho Sinh Viên HCMUT (HCMUT_SSPS) là một hệ thống toàn diện được thiết kế để hỗ trợ việc in ấn tài liệu cho sinh viên tại các khuôn viên của trường đại học. Hệ thống này có thể truy cập thông qua ứng dụng web hoặc di động, đảm bảo sự thuận tiện cho tất cả người dùng. Hệ thống được quản lý bởi Sở Quản lý Dịch vụ In Ấn Sinh Viên (SPSO) và tích hợp nhiều tính năng để nâng cao trải nghiệm người dùng và kiểm soát hành chính.
+# TÍNH NĂNG
+## TÍNH NĂNG IN ẤN
+**1. In tài liệu**
+- Sinh viên có thể tải lên tệp tài liệu để in ấn.
+- Chọn máy in dựa trên vị trí trên trường, tên tòa nhà và số phòng.
+- Cài đặt cấu hình in (kích thước giấy, số trang, một/đa mặt, số bản sao, v.v.).
+**2. Lưu lịch sử in**
+  - Hệ thống lưu lại lịch sử in của sinh viên bao gồm: thời gian, địa điểm, tài liệu đã in, số trang, khổ giấy,...
+## TÍNH NĂNG QUẢN TRỊ
+**1. Quản lý máy in**
+- SPSO có thể thêm, kích hoạt hoặc vô hiệu hóa máy in theo nhu cầu.
+**2. Quản lý cấu hình**
+  - SPSO có thể cấu hình các thiết lập hệ thống, bao gồm số trang mặc định cho mỗi học kỳ, ngày cấp trang mặc định, loại tệp được phép,...
+## QUẢN LÝ TÀI KHOẢN SINH VIÊN
+**1. Cấp phát trang mặc định**
+- Mỗi sinh viên nhận được một số trang A4 mặc định để in ấn cho mỗi học kỳ.
+**2. Mua thêm trang in**
+- Sinh viên có thể mua thêm trang in sử dụng tính năng Mua Trang In.
+- Thanh toán trực tuyến thông qua các hệ thống tích hợp như BKPay.
+**3. Kiểm soát số trang in**
+- Hệ thống đảm bảo sinh viên chỉ có thể in trong số trang được phân quyền.
+- Mỗi trang A3 tương đương với hai trang A4.
+# Ghi Chú
+- Hệ thống được thiết kế để cải thiện trải nghiệm in ấn cho sinh viên đồng thời cung cấp kiểm soát quản trị cho SPSO.
+- Cập nhật định kỳ và cải tiến có thể được thực hiện dựa trên phản hồi người dùng và yêu cầu thay đổi.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Đối với mọi vấn đề hoặc thắc mắc, vui lòng liên hệ với BAOSRANGER.
