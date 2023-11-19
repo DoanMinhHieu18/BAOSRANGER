@@ -6,19 +6,23 @@ Hệ thống In Ấn Thông Minh Cho Sinh Viên HCMUT (HCMUT_SSPS) là một h�
 - Sinh viên có thể tải lên tệp tài liệu để in ấn.
 - Chọn máy in dựa trên vị trí trên trường, tên tòa nhà và số phòng.
 - Cài đặt cấu hình in (kích thước giấy, số trang, một/đa mặt, số bản sao, v.v.).
+
 **2. Lưu lịch sử in**
   - Hệ thống lưu lại lịch sử in của sinh viên bao gồm: thời gian, địa điểm, tài liệu đã in, số trang, khổ giấy,...
 ## TÍNH NĂNG QUẢN TRỊ
 **1. Quản lý máy in**
 - SPSO có thể thêm, kích hoạt hoặc vô hiệu hóa máy in theo nhu cầu.
+
 **2. Quản lý cấu hình**
   - SPSO có thể cấu hình các thiết lập hệ thống, bao gồm số trang mặc định cho mỗi học kỳ, ngày cấp trang mặc định, loại tệp được phép,...
 ## QUẢN LÝ TÀI KHOẢN SINH VIÊN
 **1. Cấp phát trang mặc định**
 - Mỗi sinh viên nhận được một số trang A4 mặc định để in ấn cho mỗi học kỳ.
+
 **2. Mua thêm trang in**
 - Sinh viên có thể mua thêm trang in sử dụng tính năng Mua Trang In.
 - Thanh toán trực tuyến thông qua các hệ thống tích hợp như BKPay.
+
 **3. Kiểm soát số trang in**
 - Hệ thống đảm bảo sinh viên chỉ có thể in trong số trang được phân quyền.
 - Mỗi trang A3 tương đương với hai trang A4.
