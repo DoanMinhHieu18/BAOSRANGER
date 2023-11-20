@@ -5,6 +5,10 @@ const actionTypes = Object.freeze({
   CHANGE_LANGUAGE: "CHANGE_LANGUAGE",
 
   STUDENt_LOGIN: "STUDENT_LOGIN",
+
+  //USER
+  GET_USER_INFO_SUCCESS: "GET_USER_INFO_SUCCESS",
+  GET_USER_INFO_FAIL: "GET_USER_INFO_FAIL",
 });
 
 export default actionTypes;

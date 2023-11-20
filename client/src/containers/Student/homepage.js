@@ -9,7 +9,7 @@ import HomeFooter from "../../routes/HomeFooter";
 import image_folder from "../../assets/folder.jpg";
 import ModelSetUpPrint from "../ModalFunction/ModalSetupPrint";
 // import { push } from "connected-react-router";
-// import * as actions from "../../store/actions";
+import * as actions from "../../store/actions";
 
 class HomePageStudent extends Component {
   constructor(props) {
@@ -23,8 +23,9 @@ class HomePageStudent extends Component {
   toggleModalSetupPrint = () => {
     this.setState({ isOpenModalSetupPrint: !this.state.isOpenModalSetupPrint });
   }
-  componentDidMount() {
-    this.getUser();
+  async componentDidMount() {
+    await this.getUser();
+
   }
   getUser = async () => {
     try {
@@ -33,6 +34,7 @@ class HomePageStudent extends Component {
       this.setState({
         user: data.user._json,
       });
+      this.props.getUserInfo(this.state.user);
     } catch (err) {
       console.log(err);
     }
@@ -52,7 +54,10 @@ class HomePageStudent extends Component {
   render() {
     return (
       <React.Fragment>
+        {console.log(this.props.userInfo)}
         <HeaderStudent user={this.state.user} />
+
+        {/* {console.log(this.props.userInfo)} */}
         {/* <div className="container-folder">
           <div className="container-folder-content">
             <div className="folder">
@@ -102,11 +107,14 @@ class HomePageStudent extends Component {
 const mapStateToProps = (state) => {
   return {
     language: state.app.language,
+    userInfo: state.user.userInfo,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    getUserInfo: (userInfo) => dispatch(actions.getUserInfo(userInfo)),
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePageStudent);

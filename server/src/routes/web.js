@@ -1,5 +1,6 @@
 import ggAuthController from "../controllers/ggAuthController";
 import driveController from "../controllers/driveController";
+import userController from "../controllers/userController";
 const router = require("express").Router();
 const passport = require("passport");
 
@@ -23,6 +24,8 @@ let initWebRoutes = (app) => {
   //CRUD to ggDrive
   router.get("/drive/createFolder", driveController.handleCreateFolder);
   router.post("/drive/uploadFile", type, driveController.handleUploadFile);
+
+  router.get("/api/getUserInfo", userController.handleGetUserInfo);
 
   return app.use("/", router);
 };

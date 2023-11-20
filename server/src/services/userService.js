@@ -68,6 +68,20 @@ let saveDoc = (email, name, link) => {
         }
     })
 }
+
+let getUserInfo = (email) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let user = await db.Users.findOne({
+                where: { mail: email }
+            })
+            resolve(user);
+        } catch (e) {
+            console.log(e);
+            reject(e)
+        }
+    })
+}
 module.exports = {
-    getFolderId, updateFolderId, saveDoc
+    getFolderId, updateFolderId, saveDoc, getUserInfo
 }

@@ -25,6 +25,17 @@ const userReducer = (state = initialState, action) => {
         isLoggedIn: false,
         userInfo: null,
       };
+    case actionTypes.GET_USER_INFO_SUCCESS:
+      console.log(action);
+      return {
+        ...state,
+        userInfo: action.data.user,
+
+      }
+    case actionTypes.GET_USER_INFO_FAIL:
+      return {
+        ...state,
+      }
     default:
       return state;
   }
