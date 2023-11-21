@@ -23,7 +23,60 @@ class Home extends Component {
     // return <Redirect to={linkToRedirect} />;
     return (
       <React.Fragment>
-        <div className="row home-header-container">
+
+        <p class="d-inline-flex gap-1">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Link with href
+          </a>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Button with data-bs-target
+          </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+          </div>
+        </div>
+        {/* <nav className="navbar navbar-expand-md navbar-light">
+          <img className="logo" src={bk_logo} />
+          <div className="container-xxl">
+            <span className="fw-bold ssps">
+              SSPS
+            </span>
+
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+              aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div className="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <div className="header-language ml-auto">
+                    <div className="language-top">Ngôn ngữ</div>
+                    <select className="language-bottom">
+                      <option>Tiếng Việt</option>
+                      <option>Tiếng Anh</option>
+                    </select>
+                  </div>
+                </li>
+                <li className="nav-item ms-2 d-md-inline">
+                  <div className="login">
+                    <Link
+                      type="button"
+                      className="btn btn-primary button-login"
+                      to="/login">
+                      Đăng nhập
+                    </Link>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </nav> */}
+
+        {/* <div className="row home-header-container">
           <img className="logo" src={bk_logo} />
           <div className="col-1 ssps">SSPS</div>
           <div className="header-language ml-auto">
@@ -73,7 +126,9 @@ class Home extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+
+
         {/* <div className="container-fluid">
           <div className="row home-footer">
             <div className="footer-content">
