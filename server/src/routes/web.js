@@ -1,6 +1,9 @@
 import ggAuthController from "../controllers/ggAuthController";
 import driveController from "../controllers/driveController";
 import userController from "../controllers/userController";
+import printController from "../controllers/printController";
+import buypageController from "../controllers/buypageController";
+import searchController from "../controllers/searchController";
 const router = require("express").Router();
 const passport = require("passport");
 
@@ -26,7 +29,14 @@ let initWebRoutes = (app) => {
   router.post("/drive/uploadFile", type, driveController.handleUploadFile);
 
   router.get("/api/getUserInfo", userController.handleGetUserInfo);
+  router.post("/api/getalldoc", userController.handleGetDoc)
+  router.post("/api/getallprinter", printController.handleGetPrinter)
+  router.post("/api/getprintertime", printController.handleGetPrinterTime)
+  router.post("/api/print", printController.handlePrint)
 
+  router.post("/api/buypage", buypageController.handleBuyPage)
+
+  router.post("/api/search", searchController.handleSearch)
   return app.use("/", router);
 };
 module.exports = initWebRoutes;

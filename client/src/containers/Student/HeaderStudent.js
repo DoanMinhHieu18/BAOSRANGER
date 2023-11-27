@@ -43,6 +43,9 @@ class HeaderStudent extends Component {
           <div className="col-1 homepagestudent-ssps">SSPS</div>
           <div className={this.state.switchwarehouse ? "col-1 warehouse addbottom" : "col-1 warehouse"} onClick={() => this.isSwitchWarehouse()}>KHO HỆ THỐNG</div>
           <div className={this.state.switchwarehouse ? "col-1 warehouse" : "col-1 warehouse addbottom"} onClick={() => this.isSwitchWarehouse()}>KHO CÁ NHÂN</div>
+          <div className="txt" onClick={() => this.logout()}>
+            Đăng xuất
+          </div>
           {/* <div className="avatar" onClick={() => this.handleOnClickDrop()}>
             <img src={this.state.user.picture} alt="profile" />
             <i className="fas fa-caret-down dropdown"></i>

@@ -1,11 +1,8 @@
 'use strict';
-
-const { sequelize } = require('../models');
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.createTable('Documents', {
+        await queryInterface.createTable('Bills', {
             id: {
                 type: Sequelize.INTEGER,
                 autoIncrement: true,
@@ -16,21 +13,17 @@ module.exports = {
                 type: Sequelize.INTEGER,
                 allowNull: false,
             },
-            name: {
-                type: Sequelize.STRING,
+            numpage: {
+                type: Sequelize.INTEGER,
                 allowNull: false,
             },
-            link: {
-                type: Sequelize.STRING,
+            price: {
+                type: Sequelize.INTEGER,
                 allowNull: false,
             },
-            course: {
-                type: Sequelize.STRING,
-                allowNull: false,
-            },
-            location: {
-                type: Sequelize.STRING,
-                allowNull: false,
+            payconfirm: {
+                type: Sequelize.BOOLEAN,
+                allowNull: true,
             },
             createdAt: {
                 allowNull: false,
@@ -43,6 +36,6 @@ module.exports = {
         });
     },
     async down(queryInterface, Sequelize) {
-        await queryInterface.dropTable('Documents');
+        await queryInterface.dropTable('Bills');
     }
 };

@@ -5,13 +5,14 @@ import "./ModalPrint.scss";
 // import { Modal } from "bootstrap";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { faL } from "@fortawesome/free-solid-svg-icons";
-
+import ModalSetupPrint from "./ModalSetupPrint";
 class ModalPrint extends Component {
     constructor(props) {
         super(props);
         this.state = {
             isCustom: false,
             isCustomScale: false,
+            handle: this.props.handle
         };
     }
 
@@ -28,16 +29,29 @@ class ModalPrint extends Component {
             isCustomScale: !this.state.isCustomScale,
         })
     }
+    testConfig = () => {
+        const data = {
+            numpage: "Tất cả",
+            layout: "Portrait",
+            pagesize: "A4",
+            pageperside: "1",
+            alignment: "Mặc định",
+            scale: "Mặc định",
+            copy: "1",
+        }
+        this.props.handle(data)
+        this.props.toSetupPrint()
+    }
     render() {
         return (
-            <Modal
+            <> <Modal
                 isOpen={this.props.isOpen}
                 toggle={() => this.toggle()}
                 className="modal-print"
                 size="lg"
             >
                 <div className="print-preview">
-
+                    {/* {console.log("hello: ", this.props.doc)} */}
                 </div>
                 <div className="print-config">
                     <div className="setup-print-config">
@@ -114,7 +128,7 @@ class ModalPrint extends Component {
                     </div>
 
                     <div className="action-button">
-                        <button className="button-continue">
+                        <button className="button-continue" onClick={() => this.testConfig()}>
                             Tiếp tục
                         </button>
                         <button onClick={() => this.toggle()} className="button-cancel">
@@ -122,9 +136,11 @@ class ModalPrint extends Component {
                         </button>
                     </div>
                 </div>
-
-
             </Modal >
+
+            </>
+
+
         );
     }
 }

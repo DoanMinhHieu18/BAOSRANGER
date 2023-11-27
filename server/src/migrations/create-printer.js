@@ -5,31 +5,31 @@ const { sequelize } = require('../models');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.createTable('Documents', {
+        await queryInterface.createTable('Printers', {
             id: {
                 type: Sequelize.INTEGER,
                 autoIncrement: true,
                 primaryKey: true,
                 allowNull: false,
             },
-            userid: {
+            printerid: {
                 type: Sequelize.INTEGER,
                 allowNull: false,
             },
-            name: {
-                type: Sequelize.STRING,
-                allowNull: false,
-            },
-            link: {
-                type: Sequelize.STRING,
-                allowNull: false,
-            },
-            course: {
-                type: Sequelize.STRING,
+            status: {
+                type: Sequelize.BOOLEAN,
                 allowNull: false,
             },
             location: {
                 type: Sequelize.STRING,
+                allowNull: false,
+            },
+            time: {
+                type: Sequelize.STRING,
+                allowNull: false,
+            },
+            slot: {
+                type: Sequelize.INTEGER,
                 allowNull: false,
             },
             createdAt: {
@@ -43,6 +43,6 @@ module.exports = {
         });
     },
     async down(queryInterface, Sequelize) {
-        await queryInterface.dropTable('Documents');
+        await queryInterface.dropTable('Printers');
     }
 };

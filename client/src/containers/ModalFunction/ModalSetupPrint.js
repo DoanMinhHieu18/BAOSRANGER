@@ -17,7 +17,37 @@ class ModalSetUpPrint extends Component {
     toggle = () => {
         this.props.toggleFromParent();
     };
-
+    async componentDidMount() {
+        await this.getPrinter()
+        await this.getPrinterTime()
+    }
+    getPrinter = async () => {
+        const url = `${process.env.REACT_APP_API_URL}/api/getallprinter`;
+        const { data } = await axios({
+            url: url,
+            method: "POST",
+            withCredentials: true,
+        });
+    }
+    getPrinterTime = async () => {
+        const test = {
+            printerid: "1"
+        }
+        const url1 = `${process.env.REACT_APP_API_URL}/api/getprintertime`;
+        const { data } = await axios({
+            url: url1,
+            method: "POST",
+            data: test,
+            withCredentials: true,
+        });
+    }
+    testConfig = () => {
+        const data = {
+            printerid: "1",
+            time: "6h-7h",
+        }
+        this.props.handle(data)
+    }
     render() {
         return (
             <Modal
@@ -27,6 +57,7 @@ class ModalSetUpPrint extends Component {
                 size="lg"
 
             >
+
                 <div className="modal-header-setup" toggle={() => this.toggle()}>
                     <div className="chooseMachine">
                         Chọn máy in
@@ -108,7 +139,7 @@ class ModalSetUpPrint extends Component {
                     </select>
                 </div>
                 <div className="modal-footer-setup">
-                    <button className="ConfirmButton">
+                    <button className="ConfirmButton" onClick={() => this.testConfig()}>
                         Xác nhận
                     </button>
                     <button className="CancelButton">

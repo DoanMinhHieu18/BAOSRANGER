@@ -101,6 +101,7 @@ const handleCreateFolder = async (req) => {
 //   }
 // };
 let handleUploadFile = async (req, res) => {
+  console.log("here: ", req)
   // const folderId = req.body.
   //   console.log(req.file);
   let folderId = await userService.getFolderId(req.user._json.email);
@@ -136,7 +137,7 @@ let handleUploadFile = async (req, res) => {
 
   // Write the file to the specified directory using fs.writeFile
   await fs.writeFile(
-    uploadDirectory + req.file.originalname,
+    uploadDirectory + req.body.name,
     req.file.buffer,
     (err) => {
       if (err) {
@@ -146,12 +147,12 @@ let handleUploadFile = async (req, res) => {
   );
 
   const fileMetadata = {
-    name: req.file.originalname, // Use the original filename
+    name: req.body.name, // Use the original filename
     parents: [folderId], // Specify the folder ID to upload to
   };
   const media = {
     mimeType: req.file.mimetype, // Use the MIME type of the uploaded file
-    body: fs.createReadStream(uploadDirectory + req.file.originalname),
+    body: fs.createReadStream(uploadDirectory + req.body.name),
   };
 
   try {
@@ -161,9 +162,9 @@ let handleUploadFile = async (req, res) => {
       fields: "id",
     });
     let link = "https://drive.google.com/file/d/" + file.data.id + "/view";
-    await userService.saveDoc(req.user._json.email, req.file.originalname, link)
+    await userService.saveDoc(req.user._json.email, req.body.name, link, req.body.course, req.body.location)
     if (file) {
-      await fs.unlink(uploadDirectory + req.file.originalname, () => {
+      await fs.unlink(uploadDirectory + req.body.name, () => {
         console.log("file deleted");
       });
     }

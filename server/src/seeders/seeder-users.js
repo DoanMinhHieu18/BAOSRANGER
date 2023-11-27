@@ -8,6 +8,7 @@ module.exports = {
       name: "Đoàn Minh Hiếu",
       mail: "hieu.doanminh@hcmut.edu.vn",
       folderid: null,
+      numpage: 100,
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -15,6 +16,7 @@ module.exports = {
       name: "Nguyễn Ngọc Khánh My",
       mail: "my.nguyencse21@hcmut.edu.vn",
       folderid: null,
+      numpage: 100,
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -22,6 +24,7 @@ module.exports = {
       name: "Nguyễn Trung Vương",
       mail: "vuong.nguyentrurng310@hcmut.edu.vn",
       folderid: null,
+      numpage: 100,
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -29,6 +32,7 @@ module.exports = {
       name: "Kim Nhật Thành",
       mail: "thanh.kim100403@hcmut.edu.vn",
       folderid: null,
+      numpage: 100,
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -36,6 +40,7 @@ module.exports = {
       name: "Nguyễn Thái Thời",
       mail: "thoi.nguyen152@hcmut.edu.vn",
       folderid: null,
+      numpage: 100,
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
@@ -43,6 +48,7 @@ module.exports = {
       name: "Phạm Châu Thanh Tùng",
       mail: "tung.phamchauthanh@hcmut.edu.vn",
       folderid: null,
+      numpage: 100,
       createdAt: new Date(),
       updatedAt: new Date(),
     },], {});

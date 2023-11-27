@@ -5,7 +5,7 @@ const { sequelize } = require('../models');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.createTable('Documents', {
+        await queryInterface.createTable('Prints', {
             id: {
                 type: Sequelize.INTEGER,
                 autoIncrement: true,
@@ -28,8 +28,44 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
-            location: {
+            numpage: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+            },
+            layout: {
                 type: Sequelize.STRING,
+                allowNull: false,
+            },
+            pagesize: {
+                type: Sequelize.STRING,
+                allowNull: false,
+            },
+            pageperside: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+            },
+            alignment: {
+                type: Sequelize.STRING,
+                allowNull: false,
+            },
+            scale: {
+                type: Sequelize.STRING,
+                allowNull: false,
+            },
+            copy: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+            },
+            printerid: {
+                type: Sequelize.INTEGER,
+                allowNull: false,
+            },
+            time: {
+                type: Sequelize.STRING,
+                allowNull: false,
+            },
+            status: {
+                type: Sequelize.BOOLEAN,
                 allowNull: false,
             },
             createdAt: {
@@ -43,6 +79,6 @@ module.exports = {
         });
     },
     async down(queryInterface, Sequelize) {
-        await queryInterface.dropTable('Documents');
+        await queryInterface.dropTable('Prints');
     }
 };

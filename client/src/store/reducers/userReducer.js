@@ -26,7 +26,6 @@ const userReducer = (state = initialState, action) => {
         userInfo: null,
       };
     case actionTypes.GET_USER_INFO_SUCCESS:
-      console.log(action);
       return {
         ...state,
         userInfo: action.data.user,

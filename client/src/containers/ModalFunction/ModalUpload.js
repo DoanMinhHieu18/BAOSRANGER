@@ -12,7 +12,9 @@ class ModalUpload extends Component {
     super(props);
     this.state = {
       beforeUpload: true,
-      file: "",
+      file: {},
+      filename: "",
+      course: "",
     };
   }
   handleFileChangeFirst = async (event) => {
@@ -20,11 +22,9 @@ class ModalUpload extends Component {
       beforeUpload: !this.state.beforeUpload,
     });
     await this.setState({ file: event.target.files[0] });
-    console.log(this.state.file);
   };
   handleFileChange = async (event) => {
     await this.setState({ file: event.target.files[0] });
-    console.log(this.state.file);
   };
   toggle = () => {
     this.props.toggleFromParent();
@@ -45,7 +45,10 @@ class ModalUpload extends Component {
   };
   handleUpload = async () => {
     const formData = new FormData();
-    await formData.append("file", this.state.file); // No 'await' needed here
+    formData.append("file", this.state.file); // No 'await' needed here
+    formData.append("name", "abc")
+    formData.append("course", "giải tích 1")
+    formData.append("location", "kho cá nhân")
     const url = `${process.env.REACT_APP_API_URL}/drive/uploadFile`;
     const { data } = await axios({
       url: url,
@@ -86,7 +89,7 @@ class ModalUpload extends Component {
               </div>
               <select className="attribute-select">
                 <option className="attribute-option">Giải tích 1</option>
-                <option className="attribute-option">Giải tích 2</option>
+                <option className="attribute-option" >Giải tích 2</option>
                 <option className="attribute-option">Đại số tuyến tính</option>
                 <option className="attribute-option">Vật lí 1</option>
               </select>
