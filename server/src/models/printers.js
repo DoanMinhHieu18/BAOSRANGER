@@ -18,7 +18,9 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.BOOLEAN,
     location: DataTypes.STRING,
     time: DataTypes.STRING,
-    slot: DataTypes.INTEGER
+    slot: DataTypes.INTEGER,
+    name: DataTypes.STRING,
+    type: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Printers',

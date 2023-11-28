@@ -38,7 +38,11 @@ const handleGetDoc = async (req, res) => {
         })
     }
 }
+const handleDeleteDoc = async (req, res) => {
+    let message = await userService.deleteDoc(req.body.id);
+    return res.status(200).json(message);
+}
 
 module.exports = {
-    handleGetUserInfo, handleGetDoc
+    handleGetUserInfo, handleGetDoc, handleDeleteDoc,
 };

@@ -52,6 +52,22 @@ const handlePrint = async (req, res) => {
         })
     }
 }
+const handleGetPrintHistory = async (req, res) => {
+    let data = await userService.getprinthistory(req.body.userid)
+    if (data) {
+        return res.status(200).json({
+            errCode: 0,
+            errMessage: "get print history success",
+            data
+        })
+    } else {
+        return res.status(200).json({
+            errCode: 1,
+            errMessage: "get print history fail",
+            data: []
+        })
+    }
+}
 module.exports = {
-    handleGetPrinter, handleGetPrinterTime, handlePrint
+    handleGetPrinter, handleGetPrinterTime, handlePrint, handleGetPrintHistory
 };

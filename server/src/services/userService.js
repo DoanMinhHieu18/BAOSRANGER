@@ -246,6 +246,73 @@ let searchDoc = (data) => {
         }
     })
 }
+
+let deleteDoc = (docid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let doc = await db.Documents.findOne({
+                where: { id: docid }
+            })
+            if (!doc) {
+                resolve({
+                    errCode: 1,
+                    errMessage: `not exit`
+                })
+            }
+            await db.Documents.destroy({
+                where: { id: docid }
+            });
+            resolve({
+                errCode: 0,
+                errMessage: `deleted`
+            })
+        } catch (e) {
+            console.log(e);
+            reject(e)
+        }
+    })
+}
+let getprinthistory = (userid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let history = await db.Prints.findOne({
+                where: { userid: userid }
+            })
+            if (history) resolve(history)
+            else resolve()
+        } catch (e) {
+            console.log(e);
+            reject(e)
+        }
+    })
+}
+let getbuyhistory = (userid) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let history = await db.Bills.findOne({
+                where: { userid: userid }
+            })
+            if (history) resolve(history)
+            else resolve()
+        } catch (e) {
+            console.log(e);
+            reject(e)
+        }
+    })
+}
 module.exports = {
-    getFolderId, updateFolderId, saveDoc, getUserInfo, getDoc, getPrinter, getPrinterTime, Print, updatePrinter, buyPage, searchDoc
+    getFolderId,
+    updateFolderId,
+    saveDoc,
+    getUserInfo,
+    getDoc,
+    getPrinter,
+    getPrinterTime,
+    Print,
+    updatePrinter,
+    buyPage,
+    searchDoc,
+    deleteDoc,
+    getprinthistory,
+    getbuyhistory
 }

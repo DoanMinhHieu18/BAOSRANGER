@@ -16,6 +16,22 @@ const handleBuyPage = async (req, res) => {
         })
     }
 }
+const handleGetBuyHistory = async (req, res) => {
+    let data = await userService.getbuyhistory(req.body.userid)
+    if (data) {
+        return res.status(200).json({
+            errCode: 0,
+            errMessage: "get buy history success",
+            data
+        })
+    } else {
+        return res.status(200).json({
+            errCode: 1,
+            errMessage: "get buy history fail",
+            data: []
+        })
+    }
+}
 module.exports = {
-    handleBuyPage
+    handleBuyPage, handleGetBuyHistory
 };

@@ -4,6 +4,7 @@ import userController from "../controllers/userController";
 import printController from "../controllers/printController";
 import buypageController from "../controllers/buypageController";
 import searchController from "../controllers/searchController";
+import adminController from "../controllers/adminController";
 const router = require("express").Router();
 const passport = require("passport");
 
@@ -37,6 +38,19 @@ let initWebRoutes = (app) => {
   router.post("/api/buypage", buypageController.handleBuyPage)
 
   router.post("/api/search", searchController.handleSearch)
+
+  router.post("/api/getalluser", adminController.handleGetAllUser)
+  router.post("/api/getblockeduser", adminController.handleGetBlockedUser)
+  router.post("/api/admingetallprinter", adminController.handleGetAllPrinter)
+  router.post("/api/deletedoc", userController.handleDeleteDoc)
+  router.post("/api/getprinthistory", printController.handleGetPrintHistory)
+  router.post("/api/getprintbuy", buypageController.handleGetBuyHistory)
+  router.post("/api/blockuser", adminController.handleBlockUser)
+  router.post("/api/deleteprinter", adminController.handleDeletePrinter)
+  router.post("/api/admingetprinthistory", adminController.handleGetPrintHistory)
+  router.post("/api/admingetprinthistorybymssv", adminController.handleGetPrintHistoryByMSSV)
+  router.post("/api/addprinter", adminController.handleAddPrinter)
+  router.post("/api/updateprinter", adminController.handleUpdatePrinter)
   return app.use("/", router);
 };
 module.exports = initWebRoutes;

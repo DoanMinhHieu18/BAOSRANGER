@@ -129,6 +129,41 @@ class HomePageStudent extends Component {
     });
     console.log(data.data.doc[0])
   }
+  handleDeleteDocument = async (doc) => {
+    const url = `${process.env.REACT_APP_API_URL}/api/deletedoc`;
+    let data = await axios({
+      url: url,
+      method: "POST",
+      data: doc,
+      withCredentials: true,
+    });
+  }
+  handleGetHistoryPrint = async () => {
+    const url = `${process.env.REACT_APP_API_URL}/api/getprinthistory`;
+    const test = {
+      userid: "2110162"
+    }
+    let data = await axios({
+      url: url,
+      method: "POST",
+      data: test,
+      withCredentials: true,
+    });
+    console.log(data)
+  }
+  handleGetHistoryBuy = async () => {
+    const url = `${process.env.REACT_APP_API_URL}/api/getprintbuy`;
+    const test = {
+      userid: "2110162"
+    }
+    let data = await axios({
+      url: url,
+      method: "POST",
+      data: test,
+      withCredentials: true,
+    });
+    console.log(data)
+  }
   render() {
     const listdoc = this.state.document.doc;
     return (
@@ -143,10 +178,20 @@ class HomePageStudent extends Component {
           }
         </div>
         <div>
+          {listdoc && listdoc.length > 0 && listdoc.map((doc, index) => (
+            // { console.log(doc) }
+            <button onClick={() => this.handleDeleteDocument(doc)}>Delete</button>
+
+          ))
+          }
+        </div>
+        <div>
           <button onClick={() => this.handleBuyPage()}>Buy Page</button>
         </div>
         <div><input onChange={(event) => this.handleOnChangeSearch(event)} /></div>
         <div><button onClick={() => this.handleSearch()}>Click to Search</button></div>
+        <div><button onClick={() => this.handleGetHistoryPrint()}>Click to xem lịch sử in</button></div>
+        <div><button onClick={() => this.handleGetHistoryBuy()}>Click to xem lịch sử mua</button></div>
         {/* <table >
           <tr>
             <th>STT</th>
